@@ -23,4 +23,6 @@ The player earns prize money after every 10 correctly answered questions — jus
    - **Continue (Y)** → Move to the next set of questions  
    - **Quit (N)** → Go home with your current winnings  
 
-6. A **wrong answer** ends the game immediately with the message:  
+6. A **wrong answer** ends the game immediately with the message:
+   Wrong Answer
+--BETTER LUCK NEXT TIME--
