@@ -1,7 +1,7 @@
 
 print ("This Game will contain '50 Questions', if each time you will be reaching the trademark of 10 questions, you can take the given money alloted to that 10 questions\n--BEST OF LUCK--")
 
-#Set of questions that the contestant need to face for the given prices
+# Set of questions that the contestant need to face for the given prices
 questions = [
     ["Who is Shah Rukh Khan?", "WWE Wrestler", "Plumber", "Actor", "Astronaut", 3],
     ["What is the capital of France?", "Berlin", "Paris", "Rome", "London", 2],
@@ -57,8 +57,8 @@ questions = [
 
 # These are the prizes given to the contestant that will be crossing the 10 question mark each time, within 50 questions
 prizes = [ 1000, 5500, 10500, 15000, 25000 ]
-i = 1
-idx = 0
+i = 1   # the question numbering
+idx = 0  # index of the prizes
 for question in questions:
     print (f"Q{i}.{question[0]}")
     print ("(a)",question[1])
@@ -66,12 +66,12 @@ for question in questions:
     print ("(c)",question[3])
     print ("(d)",question[4])
     
-    ans = input("Enter your option (a, b, c, d) : ")
+    ans = input("Enter your option (a, b, c, d) : ") # answer input
     if ((ans == 'a' and question[5] == 1) or (ans == 'b' and question[5] == 2) or (ans == 'c' and question[5] == 3) or (ans == 'd' and question[5] == 4)):
         print ("Correct Answer")
-        if (i % 10 == 0):
+        if (i % 10 == 0): # 10 questions checkpoint
             print (f"You have won ${prizes[idx]}")
-            if(i != 50):
+            if(i != 50): # excluding the last question
                 try:
                     continue_wanted = input(f"Do you want to continue or go home with ${prizes[idx]}, press(Y/N) : ")
                     if (continue_wanted != 'Y' and continue_wanted != 'N'):
@@ -84,7 +84,7 @@ for question in questions:
                     else:
                         print ("Have a great day")
                         break
-                except Exception as e:
+                except Exception as e: # to avoid unwanted inputs
                     print (f"Wrong input type, error is : {e}.")
         i = i + 1
     else:
